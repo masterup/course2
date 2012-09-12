@@ -17,7 +17,9 @@
 		105381A715FB3AC7009B520B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 105381A515FB3AC7009B520B /* ViewController.xib */; };
 		105381AE15FB3B39009B520B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105381AD15FB3B39009B520B /* CoreData.framework */; };
 		105381B215FB3B8B009B520B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 105381B015FB3B8B009B520B /* Model.xcdatamodeld */; };
-		105381B815FB3C75009B520B /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 105381B715FB3C75009B520B /* Ticket.m */; };
+		1070621F16010058009BE208 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070621E16010058009BE208 /* Answer.m */; };
+		1070622216010058009BE208 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070622116010058009BE208 /* Ticket.m */; };
+		1070622516010058009BE208 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1070622416010058009BE208 /* Question.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +38,12 @@
 		105381A615FB3AC7009B520B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		105381AD15FB3B39009B520B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		105381B115FB3B8B009B520B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		105381B615FB3C75009B520B /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
-		105381B715FB3C75009B520B /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		1070621D16010058009BE208 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		1070621E16010058009BE208 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		1070622016010058009BE208 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		1070622116010058009BE208 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		1070622316010058009BE208 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		1070622416010058009BE208 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				105381B015FB3B8B009B520B /* Model.xcdatamodeld */,
-				105381B615FB3C75009B520B /* Ticket.h */,
-				105381B715FB3C75009B520B /* Ticket.m */,
+				1070622316010058009BE208 /* Question.h */,
+				1070622416010058009BE208 /* Question.m */,
+				1070622016010058009BE208 /* Ticket.h */,
+				1070622116010058009BE208 /* Ticket.m */,
+				1070621D16010058009BE208 /* Answer.h */,
+				1070621E16010058009BE208 /* Answer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -185,7 +195,9 @@
 				105381A115FB3AC7009B520B /* AppDelegate.m in Sources */,
 				105381A415FB3AC7009B520B /* ViewController.m in Sources */,
 				105381B215FB3B8B009B520B /* Model.xcdatamodeld in Sources */,
-				105381B815FB3C75009B520B /* Ticket.m in Sources */,
+				1070621F16010058009BE208 /* Answer.m in Sources */,
+				1070622216010058009BE208 /* Ticket.m in Sources */,
+				1070622516010058009BE208 /* Question.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +313,7 @@
 				105381AC15FB3AC7009B520B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

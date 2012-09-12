@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Ticket.h"
+#import "Answer.h"
+#import "Question.h"
 
 @interface ViewController ()
 
@@ -21,6 +24,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Ticket" inManagedObjectContext:self.managedContext];
+    
+    [fetchRequest setEntity:entity];
+    
+    NSError* error = nil;
+    
+    NSArray* results = [self.managedContext executeFetchRequest:fetchRequest error:&error];
+    
+    Ticket* ticket = [results lastObject];
+    
+    NSScanner
+    NSLog(@"%@", ticket.questions);
 }
 
 - (void)viewDidUnload

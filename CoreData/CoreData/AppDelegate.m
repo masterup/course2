@@ -12,6 +12,9 @@
 #import <CoreData/CoreData.h>
 
 #import "Ticket.h"
+#import "Question.h"
+#import "Answer.h"
+
 @implementation AppDelegate
 
 @synthesize persistentStoreCoordinator;
@@ -27,10 +30,25 @@
     self.viewController.managedContext = [self managedObjectContext];
     
     NSLog(@"%@", self.viewController.managedContext);
+
     
     Ticket* ticket = [NSEntityDescription insertNewObjectForEntityForName:@"Ticket" inManagedObjectContext:self.viewController.managedContext];
     
-    ticket.name = @"Ticket One!";
+    ticket.ticketNumber = @42; //[NSNumber numberWithInt:42];
+    
+    Question* question = [NSEntityDescription insertNewObjectForEntityForName:@"Question" inManagedObjectContext:self.viewController.managedContext];
+    
+    question.questionText = @"What is the main answer?";
+    question.questionImage = @"somepathtoimage";
+    
+    Answer* answer = [NSEntityDescription insertNewObjectForEntityForName:@"Answer" inManagedObjectContext:self.viewController.managedContext];
+    
+    answer.answerText = @"42";
+    answer.isCorrentAnswer = @1;
+    
+    [question addAnswersObject:answer];
+    [ticket addQuestionsObject:question];
+    
     
     NSError* error;
     [self.viewController.managedContext save:&error];
@@ -42,7 +60,6 @@
     
     NSArray *results = [[self managedObjectContext] executeFetchRequest:request error:&error];
     
-    NSLog(@"%@", results);
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
