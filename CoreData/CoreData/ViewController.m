@@ -36,8 +36,7 @@
     NSArray* results = [self.managedContext executeFetchRequest:fetchRequest error:&error];
     
     Ticket* ticket = [results lastObject];
-    
-    NSScanner
+
     NSLog(@"%@", ticket.questions);
 }
 
